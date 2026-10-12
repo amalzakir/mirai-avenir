@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIRAI by AVENIR - Smart Mirror AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #070913;
+      color: #ffffff;
+    }
+    .dark-card {
+      background-color: #111528;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .dark-card-active {
+      background-color: #1a1f38;
+      border-color: #f472b6;
+      box-shadow: 0 0 25px rgba(244, 114, 182, 0.3);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #f472b6, #c084fc, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-[#070913] text-white min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0d1021]/95 border-b border-white/15 px-6 py-4 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center font-bold text-white text-lg shadow-lg shadow-pink-500/40">M</div>
+        <span class="text-xl font-bold tracking-wider text-white">MIRAI <span class="text-xs font-bold text-pink-400 tracking-widest uppercase ml-1">by Avenir</span></span>
+      </div>
+      <div class="hidden lg:flex gap-8 text-sm font-bold text-slate-200">
+        <a href="#about" class="hover:text-pink-400 transition-colors">About</a>
+        <a href="#simulator" class="hover:text-pink-400 transition-colors">Mirror Simulator</a>
+        <a href="#models" class="hover:text-pink-400 transition-colors">Products</a>
+        <a href="#finances" class="hover:text-pink-400 transition-colors">Pricing & Costs</a>
+        <a href="#calculator" class="hover:text-pink-400 transition-colors">Revenue Calculator</a>
+        <a href="#why" class="hover:text-pink-400 transition-colors">Why Mirai</a>
+        <a href="#roadmap" class="hover:text-pink-400 transition-colors">Roadmap</a>
+      </div>
+      <a href="#simulator" class="bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 text-white text-xs font-bold px-5 py-2.5 rounded-full transition-all shadow-md shadow-pink-500/30">Try Demo</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="about" class="pt-40 pb-20 px-6 max-w-7xl mx-auto text-center relative">
+    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#161b33] border border-pink-500/50 text-xs font-bold text-pink-300 mb-6 shadow-md">
+      <span class="flex h-2.5 w-2.5 rounded-full bg-pink-500 animate-ping"></span>
+      Mirror, Mirror On The Wall… Who is the fairest of them all? In 2026, we have bigger questions.
+    </div>
+    
+    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight text-white">
+      YOUR MIRROR. <br>
+      <span class="gradient-text">YOUR AI STYLIST.</span>
+    </h1>
+    
+    <p class="max-w-2xl mx-auto text-slate-200 text-base md:text-lg mb-10 font-medium leading-relaxed">
+      Derived from <i>miroir</i> and the Japanese word for <i>'future'</i> — <strong class="text-white">MIRAI</strong> is an advanced AI-powered smart mirror that seamlessly integrates colour analysis, makeup guidance, hairstyle suggestions, and outfit recommendations.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-4 mb-16">
+      <a href="#simulator" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold px-8 py-3.5 rounded-full shadow-lg shadow-pink-500/40 hover:opacity-95 transition-all flex items-center gap-2 text-sm">
+        <i class="fa-solid fa-wand-magic-sparkles"></i> Launch Interactive Mirror
+      </a>
+      <a href="#calculator" class="bg-[#161b33] hover:bg-[#1f2647] text-white font-bold px-8 py-3.5 rounded-full transition-all flex items-center gap-2 border border-white/20 text-sm">
+        <i class="fa-solid fa-calculator"></i> Business Profit Simulator
+      </a>
+    </div>
+
+    <!-- Founders pill -->
+    <div class="inline-flex flex-wrap items-center justify-center gap-3 text-xs bg-[#111528] px-6 py-3.5 rounded-2xl border border-white/20 shadow-md">
+      <span class="text-pink-400 font-extrabold uppercase tracking-wider">Founding Team:</span>
+      <span class="text-white font-bold">Amal</span> • 
+      <span class="text-white font-bold">Shiza</span> • 
+      <span class="text-white font-bold">Bella</span> • 
+      <span class="text-white font-bold">Husna</span> • 
+      <span class="text-white font-bold">Ameera</span>
+    </div>
+  </header>
+
+  <!-- Interactive Mirror Simulator -->
+  <section id="simulator" class="py-20 px-6 max-w-7xl mx-auto border-t border-white/10">
+    <div class="text-center mb-12">
+      <h2 class="text-xs uppercase tracking-widest text-pink-400 font-extrabold mb-2">Interactive Experience</h2>
+      <h3 class="text-3xl md:text-4xl font-bold text-white">Experience MIRAI Smart Interface</h3>
+      <p class="text-slate-300 text-sm mt-2">Click through the smart mirror capabilities below to test the AI interface.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <!-- Controls -->
+      <div class="lg:col-span-4 flex flex-col gap-4">
+        <button onclick="setMirrorMode('color')" id="btn-color" class="sim-btn dark-card dark-card-active p-5 rounded-2xl text-left transition-all flex items-center gap-4 cursor-pointer">
+          <div class="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-300 text-xl"><i class="fa-solid fa-palette"></i></div>
+          <div>
+            <h4 class="font-bold text-white text-base">Color Analysis</h4>
+            <p class="text-xs text-slate-300 mt-1">Detect skin undertones & optimal seasonal palettes.</p>
+          </div>
+        </button>
+
+        <button onclick="setMirrorMode('makeup')" id="btn-makeup" class="sim-btn dark-card p-5 rounded-2xl text-left transition-all flex items-center gap-4 hover:bg-[#1a1f38] cursor-pointer">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-300 text-xl"><i class="fa-solid fa-sparkles"></i></div>
+          <div>
+            <h4 class="font-bold text-white text-base">Makeup & Grooming</h4>
+            <p class="text-xs text-slate-300 mt-1">Step-by-step augmented reality cosmetics application.</p>
+          </div>
+        </button>
+
+        <button onclick="setMirrorMode('hair')" id="btn-hair" class="sim-btn dark-card p-5 rounded-2xl text-left transition-all flex items-center gap-4 hover:bg-[#1a1f38] cursor-pointer">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-300 text-xl"><i class="fa-solid fa-scissors"></i></div>
+          <div>
+            <h4 class="font-bold text-white text-base">Hairstyle & Hair Color</h4>
+            <p class="text-xs text-slate-300 mt-1">Virtual try-on for haircuts, volume & hair dyes.</p>
+          </div>
+        </button>
+
+        <button onclick="setMirrorMode('outfit')" id="btn-outfit" class="sim-btn dark-card p-5 rounded-2xl text-left transition-all flex items-center gap-4 hover:bg-[#1a1f38] cursor-pointer">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-300 text-xl"><i class="fa-solid fa-shirt"></i></div>
+          <div>
+            <h4 class="font-bold text-white text-base">Outfit Recommendations</h4>
+            <p class="text-xs text-slate-300 mt-1">Full-length wardrobe matching & occasion styling.</p>
+          </div>
+        </button>
+      </div>
+
+      <!-- Simulated Mirror Canvas -->
+      <div class="lg:col-span-8 flex justify-center">
+        <div class="relative w-full max-w-md h-[580px] bg-[#0d1021] rounded-[3rem] p-4 border-[6px] border-slate-700 shadow-2xl shadow-pink-500/20 flex flex-col justify-between overflow-hidden">
+          
+          <!-- Mirror Camera Sensor Top -->
+          <div class="absolute top-3 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-slate-800 px-4 py-1.5 rounded-full z-20 border border-white/20">
+            <div class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></div>
+            <span class="text-[11px] uppercase font-mono text-white font-bold">MIRAI 4K AI CAM ACTIVE</span>
+          </div>
+
+          <!-- Glass Display Area -->
+          <div id="sim-display" class="relative w-full h-full rounded-[2.2rem] bg-gradient-to-b from-[#11162d] to-black p-6 flex flex-col justify-between pt-12 overflow-hidden border border-white/10">
+            
+            <!-- Simulated Face Mesh Overlay -->
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 pointer-events-none">
+              <div class="w-48 h-64 border-2 border-dashed border-pink-400 rounded-full flex items-center justify-center">
+                <div class="w-32 h-40 border border-purple-400 rounded-full"></div>
+              </div>
+            </div>
+
+            <!-- Header Info on Mirror -->
+            <div class="relative z-10 flex justify-between items-start">
+              <div>
+                <span class="text-xs text-pink-400 font-extrabold uppercase tracking-wider">Analysis Result</span>
+                <h3 id="sim-title" class="text-xl font-bold text-white mt-0.5">Warm Autumn Palette</h3>
+              </div>
+              <span class="text-xs bg-pink-500/30 border border-pink-500/60 text-pink-200 font-bold px-3 py-1 rounded-full">98% Match</span>
+            </div>
+
+            <!-- Dynamic Interactive Visual on Mirror -->
+            <div id="sim-content" class="relative z-10 my-auto bg-[#0b0e1e]/90 p-5 rounded-2xl border border-white/20 shadow-xl">
+              <p class="text-xs font-bold text-slate-200 mb-3">Recommended Colors for skin tone:</p>
+              <div class="flex gap-3 mb-4">
+                <div class="w-10 h-10 rounded-full bg-[#8B4513] border-2 border-white/50 flex items-center justify-center text-[9px] text-white font-extrabold shadow">Terracotta</div>
+                <div class="w-10 h-10 rounded-full bg-[#556B2F] border-2 border-white/50 flex items-center justify-center text-[9px] text-white font-extrabold shadow">Olive</div>
+                <div class="w-10 h-10 rounded-full bg-[#DAA520] border-2 border-white/50 flex items-center justify-center text-[9px] text-black font-extrabold shadow">Mustard</div>
+                <div class="w-10 h-10 rounded-full bg-[#800020] border-2 border-white/50 flex items-center justify-center text-[9px] text-white font-extrabold shadow">Burgundy</div>
+              </div>
+              <p class="text-xs text-slate-300 italic">"Warm earth tones highlight your natural facial contrast with optimum radiance."</p>
+            </div>
+
+            <!-- Footer Action on Mirror -->
+            <div class="relative z-10 flex items-center justify-between pt-3 border-t border-white/20">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-mobile-screen text-pink-400 text-sm"></i>
+                <span class="text-xs font-semibold text-slate-200">Synced to Mobile App</span>
+              </div>
+              <button onclick="alert('Look saved to your Mirai Mobile App successfully!')" class="bg-pink-500 hover:bg-pink-600 text-white text-xs font-bold px-3.5 py-1.5 rounded-lg transition-colors shadow">Save Look</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Lineup (Mini vs Full) -->
+  <section id="models" class="py-20 px-6 max-w-7xl mx-auto border-t border-white/10">
+    <div class="text-center mb-16">
+      <h2 class="text-xs uppercase tracking-widest text-pink-400 font-extrabold mb-2">Product Lineup</h2>
+      <h3 class="text-3xl md:text-4xl font-bold text-white">Choose Your MIRAI</h3>
+      <p class="text-slate-300 text-sm mt-2 max-w-xl mx-auto">Engineered for personal vanities or full-length lifestyle and retail installations.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <!-- MIRAI MINI -->
+      <div class="dark-card p-8 rounded-3xl flex flex-col justify-between hover:border-pink-500/60 transition-all shadow-xl">
+        <div>
+          <div class="inline-block bg-pink-500/20 border border-pink-500/40 text-pink-300 text-xs font-extrabold px-3 py-1 rounded-full mb-4">Desktop / Vanity Model</div>
+          <h4 class="text-2xl font-bold text-white mb-2">MIRAI MINI</h4>
+          <p class="text-slate-300 text-sm mb-6">Compact, high-definition smart mirror engineered for cosmetics, hair styling, and skincare.</p>
+          
+          <div class="text-3xl font-extrabold text-white mb-6">AED 999 <span class="text-xs text-slate-300 font-normal">/ retail price</span></div>
+
+          <ul class="space-y-3 text-xs text-slate-200 mb-8 font-semibold">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-pink-400 text-sm"></i> Makeup guidance & color analysis</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-pink-400 text-sm"></i> Hairstyle & hair color virtual try-on</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-pink-400 text-sm"></i> Glasses & jewellery recommendations</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-pink-400 text-sm"></i> Grooming & skincare suggestions</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-pink-400 text-sm"></i> Mobile app synchronization</li>
+          </ul>
+        </div>
+        <a href="#finances" onclick="toggleCostModel('mini')" class="w-full py-3 rounded-xl bg-[#1a1f38] hover:bg-[#252c4e] text-center text-xs font-bold text-white transition-colors border border-white/20">Inspect BOM Cost</a>
+      </div>
+
+      <!-- MIRAI FULL -->
+      <div class="dark-card p-8 rounded-3xl border-pink-500/80 bg-gradient-to-b from-pink-950/30 to-[#111528] flex flex-col justify-between hover:border-pink-500 transition-all relative overflow-hidden shadow-2xl">
+        <div class="absolute top-4 right-4 bg-gradient-to-r from-pink-500 to-purple-600 text-[10px] font-extrabold uppercase tracking-wider text-white px-3 py-1 rounded-full shadow">Complete Experience</div>
+        <div>
+          <div class="inline-block bg-purple-500/20 border border-purple-500/40 text-purple-300 text-xs font-extrabold px-3 py-1 rounded-full mb-4">Full-Length Stand</div>
+          <h4 class="text-2xl font-bold text-white mb-2">MIRAI FULL</h4>
+          <p class="text-slate-300 text-sm mb-6">Full-body smart mirror designed for complete outfit matching, head-to-toe styling, and retail kiosks.</p>
+          
+          <div class="text-3xl font-extrabold text-white mb-6">AED 1,799 <span class="text-xs text-slate-300 font-normal">/ retail price</span></div>
+
+          <ul class="space-y-3 text-xs text-slate-200 mb-8 font-semibold">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-pink-400 text-sm"></i> <strong>Includes all MINI features</strong></li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-pink-400 text-sm"></i> Head-to-toe outfit recommendations</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-pink-400 text-sm"></i> Dynamic clothing combinations</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-pink-400 text-sm"></i> Digital Wardrobe integration</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-pink-400 text-sm"></i> Ideal for salons, boutiques & homes</li>
+          </ul>
+        </div>
+        <a href="#finances" onclick="toggleCostModel('full')" class="w-full py-3 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 text-center text-xs font-bold text-white hover:opacity-90 transition-opacity shadow-lg">Inspect BOM Cost</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Manufacturing Cost Breakdown -->
+  <section id="finances" class="py-20 px-6 max-w-7xl mx-auto border-t border-white/10">
+    <div class="text-center mb-16">
+      <h2 class="text-xs uppercase tracking-widest text-pink-400 font-extrabold mb-2">Innovation Meets Profitability</h2>
+      <h3 class="text-3xl md:text-4xl font-bold text-white">Manufacturing & Financial Breakdown</h3>
+      <p class="text-slate-300 text-sm mt-2">Toggle between models to inspect individual component costs and gross profit margins.</p>
+    </div>
+
+    <!-- Model Switcher -->
+    <div class="flex justify-center mb-10">
+      <div class="bg-[#111528] p-1.5 rounded-full flex gap-2 border border-white/20">
+        <button onclick="toggleCostModel('mini')" id="tab-mini" class="px-6 py-2.5 rounded-full text-xs font-bold bg-pink-500 text-white transition-all shadow cursor-pointer">MIRAI MINI</button>
+        <button onclick="toggleCostModel('full')" id="tab-full" class="px-6 py-2.5 rounded-full text-xs font-bold text-slate-300 hover:text-white transition-all cursor-pointer">MIRAI FULL</button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <!-- Breakdown Table -->
+      <div class="lg:col-span-7 dark-card p-6 md:p-8 rounded-3xl shadow-xl">
+        <h4 id="cost-table-title" class="text-lg font-bold text-white mb-4">MIRAI MINI Bill of Materials (BOM)</h4>
+        
+        <div id="cost-list" class="space-y-3 text-xs md:text-sm">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-white/20 flex justify-between items-center text-sm md:text-base font-bold text-white">
+          <span>Total Manufacturing Cost:</span>
+          <span id="cost-total" class="text-pink-400 font-mono text-lg">AED 550</span>
+        </div>
+      </div>
+
+      <!-- Financial Metrics Card -->
+      <div class="lg:col-span-5 dark-card p-8 rounded-3xl bg-gradient-to-br from-purple-950/60 to-pink-950/60 border-pink-500/50 shadow-2xl">
+        <h4 class="text-xs uppercase tracking-wider text-pink-300 font-extrabold mb-6">Unit Economics & Profit</h4>
+
+        <div class="space-y-6">
+          <div>
+            <span class="text-xs text-slate-200 font-bold">Retail Selling Price</span>
+            <div id="metric-price" class="text-3xl font-extrabold text-white mt-0.5">AED 999</div>
+          </div>
+
+          <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden border border-white/20">
+            <div id="profit-bar" class="bg-gradient-to-r from-pink-500 to-emerald-400 h-full w-[45%] transition-all duration-500"></div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 pt-2">
+            <div class="bg-[#0e1222] p-3.5 rounded-2xl border border-white/15">
+              <span class="text-[11px] text-slate-300 font-bold">Manufacturing Cost</span>
+              <div id="metric-cost" class="text-lg font-extrabold text-red-400 mt-1">AED 550</div>
+            </div>
+            <div class="bg-[#0e1222] p-3.5 rounded-2xl border border-white/15">
+              <span class="text-[11px] text-slate-300 font-bold">Gross Profit / Unit</span>
+              <div id="metric-profit" class="text-lg font-extrabold text-emerald-400 mt-1">AED 449</div>
+            </div>
+          </div>
+
+          <p class="text-[11px] text-slate-300 leading-relaxed border-t border-white/20 pt-4 italic">
+            *Gross profit figures exclude advertising, delivery, payment fees, warranty costs, software expenses, and other business expenses.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Revenue & Profit Calculator -->
+  <section id="calculator" class="py-20 px-6 max-w-7xl mx-auto border-t border-white/10">
+    <div class="text-center mb-16">
+      <h2 class="text-xs uppercase tracking-widest text-pink-400 font-extrabold mb-2">Business Simulator</h2>
+      <h3 class="text-3xl md:text-4xl font-bold text-white">Interactive Sales & Profit Calculator</h3>
+      <p class="text-slate-300 text-sm mt-2">Adjust the sliders to estimate total sales revenue and gross profit based on units sold.</p>
+    </div>
+
+    <div class="dark-card p-8 md:p-12 rounded-3xl max-w-4xl mx-auto shadow-2xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <!-- Sliders -->
+        <div class="space-y-6">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label class="text-xs font-bold text-slate-200 uppercase tracking-wide">MIRAI MINI Units Sold</label>
+              <span id="calc-mini-val" class="font-mono text-pink-400 font-extrabold text-lg">100</span>
+            </div>
+            <input type="range" id="range-mini" min="0" max="1000" step="10" value="100" oninput="updateCalculator()" class="w-full accent-pink-500 cursor-pointer bg-slate-800 rounded-lg h-2.5">
+            <div class="flex justify-between text-[10px] text-slate-400 mt-1 font-bold"><span>0</span><span>500</span><span>1,000 units</span></div>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label class="text-xs font-bold text-slate-200 uppercase tracking-wide">MIRAI FULL Units Sold</label>
+              <span id="calc-full-val" class="font-mono text-purple-400 font-extrabold text-lg">50</span>
+            </div>
+            <input type="range" id="range-full" min="0" max="500" step="5" value="50" oninput="updateCalculator()" class="w-full accent-purple-500 cursor-pointer bg-slate-800 rounded-lg h-2.5">
+            <div class="flex justify-between text-[10px] text-slate-400 mt-1 font-bold"><span>0</span><span>250</span><span>500 units</span></div>
+          </div>
+        </div>
+
+        <!-- Output Results -->
+        <div class="bg-[#0b0e1e] p-6 md:p-8 rounded-2xl border border-white/20 flex flex-col justify-between shadow-inner">
+          <h4 class="text-xs uppercase tracking-widest text-pink-400 font-extrabold mb-4">Projected Financial Return</h4>
+          
+          <div class="space-y-4 mb-6">
+            <div>
+              <span class="text-xs text-slate-300 font-bold">Total Gross Revenue</span>
+              <div id="calc-rev" class="text-2xl font-extrabold text-white font-mono mt-0.5">AED 189,850</div>
+            </div>
+            <div class="pt-3 border-t border-white/20">
+              <span class="text-xs text-slate-300 font-bold">Total Gross Profit</span>
+              <div id="calc-profit" class="text-3xl font-extrabold text-emerald-400 font-mono mt-0.5">AED 84,350</div>
+            </div>
+          </div>
+
+          <div class="text-[11px] text-slate-300 bg-white/5 p-3 rounded-xl border border-white/10 font-medium">
+            <i class="fa-solid fa-circle-info text-pink-400 mr-1"></i> Based on AED 449 margin for Mini and AED 699 margin for Full.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Target Market & Personas -->
+  <section class="py-20 px-6 max-w-7xl mx-auto border-t border-white/10">
+    <div class="text-center mb-16">
+      <h2 class="text-xs uppercase tracking-widest text-pink-400 font-extrabold mb-2">Market Strategy</h2>
+      <h3 class="text-3xl md:text-4xl font-bold text-white">Target Audience & Sales Channels</h3>
+      <p class="text-slate-300 text-sm mt-2">Click each segment to discover how MIRAI serves different customer needs.</p>
+    </div>
+
+    <!-- Persona Tabs -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-10">
+      <button onclick="setPersona('students')" id="persona-btn-students" class="persona-tab dark-card dark-card-active p-5 rounded-2xl text-center transition-all cursor-pointer">
+        <i class="fa-solid fa-graduation-cap text-pink-400 text-2xl mb-2"></i>
+        <h4 class="font-bold text-white text-sm">Students & Families</h4>
+      </button>
+      <button onclick="setPersona('salons')" id="persona-btn-salons" class="persona-tab dark-card p-5 rounded-2xl text-center transition-all hover:bg-[#1a1f38] cursor-pointer">
+        <i class="fa-solid fa-spa text-purple-400 text-2xl mb-2"></i>
+        <h4 class="font-bold text-white text-sm">Salons & Spas</h4>
+      </button>
+      <button onclick="setPersona('professionals')" id="persona-btn-professionals" class="persona-tab dark-card p-5 rounded-2xl text-center transition-all hover:bg-[#1a1f38] cursor-pointer">
+        <i class="fa-solid fa-briefcase text-blue-400 text-2xl mb-2"></i>
+        <h4 class="font-bold text-white text-sm">Working Adults</h4>
+      </button>
+      <button onclick="setPersona('retailers')" id="persona-btn-retailers" class="persona-tab dark-card p-5 rounded-2xl text-center transition-all hover:bg-[#1a1f38] cursor-pointer">
+        <i class="fa-solid fa-store text-emerald-400 text-2xl mb-2"></i>
+        <h4 class="font-bold text-white text-sm">Fashion Retailers</h4>
+      </button>
+    </div>
+
+    <!-- Persona Detail Card -->
+    <div class="dark-card p-8 rounded-3xl max-w-4xl mx-auto shadow-2xl flex flex-col md:flex-row gap-8 items-center">
+      <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center text-white text-2xl shadow-lg shrink-0">
+        <i id="persona-icon" class="fa-solid fa-graduation-cap"></i>
+      </div>
+      <div>
+        <h4 id="persona-title" class="text-xl font-bold text-white mb-2">Students & Families</h4>
+        <p id="persona-desc" class="text-slate-200 text-sm leading-relaxed font-medium">
+          Provides affordable personal styling, hair guidance, and makeup try-ons right at home, saving teenagers and families time and money before purchasing products that may not suit them.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive "Why MIRAI?" FAQ Accordion -->
+  <section id="why" class="py-20 px-6 max-w-7xl mx-auto border-t border-white/10">
+    <div class="text-center mb-16">
+      <h2 class="text-xs uppercase tracking-widest text-pink-400 font-extrabold mb-2">Competitive Edge</h2>
+      <h3 class="text-3xl md:text-4xl font-bold text-white">Why MIRAI?</h3>
+      <p class="text-slate-300 text-sm mt-2 max-w-xl mx-auto">Explore how MIRAI outperforms standard phone applications and why customers choose smart mirrors.</p>
+    </div>
+
+    <div class="max-w-3xl mx-auto space-y-4">
+      <!-- FAQ 1 -->
+      <div class="dark-card rounded-2xl overflow-hidden">
+        <button onclick="toggleFaq(1)" class="w-full p-6 text-left flex justify-between items-center font-bold text-white hover:bg-[#1a1f38] transition-colors cursor-pointer">
+          <span><i class="fa-solid fa-circle-question text-pink-400 mr-2"></i> Why choose MIRAI over free mobile beauty apps?</span>
+          <i id="faq-icon-1" class="fa-solid fa-chevron-down text-slate-300 transition-transform"></i>
+        </button>
+        <div id="faq-content-1" class="hidden px-6 pb-6 text-sm text-slate-200 leading-relaxed border-t border-white/15 pt-4 font-medium">
+          While phones offer beauty apps, MIRAI uniquely combines colour analysis, makeup guidance, hairstyle suggestions, and outfit recommendations into one dedicated physical mirror. Its built-in camera, sensors, and controlled lighting provide much more consistent analysis than variable phone setups.
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="dark-card rounded-2xl overflow-hidden">
+        <button onclick="toggleFaq(2)" class="w-full p-6 text-left flex justify-between items-center font-bold text-white hover:bg-[#1a1f38] transition-colors cursor-pointer">
+          <span><i class="fa-solid fa-circle-question text-pink-400 mr-2"></i> Why would customers buy MIRAI?</span>
+          <i id="faq-icon-2" class="fa-solid fa-chevron-down text-slate-300 transition-transform"></i>
+        </button>
+        <div id="faq-content-2" class="hidden px-6 pb-6 text-sm text-slate-200 leading-relaxed border-t border-white/15 pt-4 font-medium">
+          <ul class="space-y-2">
+            <li>💰 <strong>Save money:</strong> Explore different looks before spending money on cosmetics or clothes that may not suit them.</li>
+            <li>⏱️ <strong>Save time:</strong> Get personalized styling suggestions in one single place instead of switching across multiple apps.</li>
+            <li>🛍️ <strong>Shop smarter:</strong> Discover products suited to their exact preferences through our brand partnerships.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="dark-card rounded-2xl overflow-hidden">
+        <button onclick="toggleFaq(3)" class="w-full p-6 text-left flex justify-between items-center font-bold text-white hover:bg-[#1a1f38] transition-colors cursor-pointer">
+          <span><i class="fa-solid fa-circle-question text-pink-400 mr-2"></i> What is MIRAI's disadvantage & market entry strategy?</span>
+          <i id="faq-icon-3" class="fa-solid fa-chevron-down text-slate-300 transition-transform"></i>
+        </button>
+        <div id="faq-content-3" class="hidden px-6 pb-6 text-sm text-slate-200 leading-relaxed border-t border-white/15 pt-4 font-medium">
+          MIRAI costs more upfront than free mobile apps and requires physical space. To overcome this, we target salons and beauty stores first, where one kiosk can serve many customers and demonstrate value!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SDG Impact & Sustainability -->
+  <section class="py-20 px-6 max-w-7xl mx-auto border-t border-white/10 bg-[#070913]">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-xs uppercase tracking-widest text-pink-400 font-extrabold mb-2">Our Impact</h2>
+        <h3 class="text-3xl font-bold mb-6 text-white">Marketing & Sustainable Growth</h3>
+
+        <div class="space-y-4">
+          <div class="bg-[#111528] p-5 rounded-2xl border border-white/20 shadow-md">
+            <h4 class="font-bold text-white text-base mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-bullhorn text-pink-400"></i> Interactive Mall Demonstrations
+            </h4>
+            <p class="text-xs text-slate-200 font-medium">Live pop-up kiosks allowing shoppers to experience virtual styling firsthand.</p>
+          </div>
+
+          <div class="bg-[#111528] p-5 rounded-2xl border border-white/20 shadow-md">
+            <h4 class="font-bold text-white text-base mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-handshake text-purple-400"></i> Beauty & Fashion Partnerships
+            </h4>
+            <p class="text-xs text-slate-200 font-medium">Direct integration with retail brands for product recommendations and commissions.</p>
+          </div>
+
+          <div class="bg-[#111528] p-5 rounded-2xl border border-white/20 shadow-md">
+            <h4 class="font-bold text-white text-base mb-1 flex items-center gap-2">
+              <i class="fa-solid fa-share-nodes text-blue-400"></i> Social Media Sharing
+            </h4>
+            <p class="text-xs text-slate-200 font-medium">One-tap look sharing with friends and followers with user permission.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SDG Card -->
+      <div class="bg-[#0d1c16] p-8 rounded-3xl border-2 border-emerald-500 shadow-2xl flex flex-col justify-between">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-400 text-emerald-300 text-xs font-extrabold px-3.5 py-1.5 rounded-full mb-4">
+            <i class="fa-solid fa-leaf"></i> UN SDG 12
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">Responsible Consumption & Production</h3>
+          <p class="text-slate-200 text-xs font-medium leading-relaxed mb-6">
+            MIRAI encourages sustainable habits by reducing unnecessary purchases and clothing waste through digital wardrobe reuse.
+          </p>
+
+          <ul class="space-y-3 text-xs text-slate-100 font-bold">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-check-double text-emerald-400 mt-0.5 text-sm"></i>
+              <span><strong>Virtual Try-Ons:</strong> Make more informed buying decisions before checkout.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-recycle text-emerald-400 mt-0.5 text-sm"></i>
+              <span><strong>Digital Wardrobe:</strong> Encourage clothing reuse and restyling.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-tags text-emerald-400 mt-0.5 text-sm"></i>
+              <span><strong>Sustainable Recommendations:</strong> Highlight eco-friendly brand alternatives.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap" class="py-20 px-6 max-w-7xl mx-auto border-t border-white/10">
+    <div class="text-center mb-16">
+      <h2 class="text-xs uppercase tracking-widest text-pink-400 font-extrabold mb-2">Future Vision</h2>
+      <h3 class="text-3xl md:text-4xl font-bold text-white">MIRAI — From Idea to Reality</h3>
+      <p class="text-slate-300 text-sm mt-2 max-w-xl mx-auto">Our projected business journey towards long-term profitability.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div class="dark-card p-6 rounded-2xl relative border-l-4 border-l-pink-500 shadow-xl">
+        <span class="text-xs text-pink-400 font-extrabold uppercase">Phase 1</span>
+        <h4 class="font-bold text-white text-sm my-1">Development</h4>
+        <p class="text-xs text-slate-200 font-medium">Initial investment in prototypes, software development, testing, and market research.</p>
+      </div>
+
+      <div class="dark-card p-6 rounded-2xl relative border-l-4 border-l-purple-500 shadow-xl">
+        <span class="text-xs text-purple-400 font-extrabold uppercase">Phase 2</span>
+        <h4 class="font-bold text-white text-sm my-1">Launch (Possible Loss)</h4>
+        <p class="text-xs text-slate-200 font-medium">Initial sales may be low while setup costs are high. Small batch production to reduce risk.</p>
+      </div>
+
+      <div class="dark-card p-6 rounded-2xl relative border-l-4 border-l-blue-500 shadow-xl">
+        <span class="text-xs text-blue-400 font-extrabold uppercase">Phase 3</span>
+        <h4 class="font-bold text-white text-sm my-1">Growth (Profit Year 2)</h4>
+        <p class="text-xs text-slate-200 font-medium">Improve product using customer feedback, build trust, and increase sales while controlling costs.</p>
+      </div>
+
+      <div class="dark-card p-6 rounded-2xl relative border-l-4 border-l-emerald-500 shadow-xl">
+        <span class="text-xs text-pink-400 font-extrabold uppercase">Phase 4</span>
+        <h4 class="font-bold text-white text-sm my-1">Expansion (Year 3)</h4>
+        <p class="text-xs text-slate-200 font-medium">Introduce improved features, partner with major retailers, and expand into more markets.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#05070f] border-t border-white/15 py-10 px-6 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>
+        <span class="font-bold text-white text-sm">MIRAI by AVENIR</span> © 2026. The Future of Styling Starts Here.
+      </div>
+      <div class="flex gap-6 font-bold">
+        <a href="#about" class="hover:text-pink-400">About</a>
+        <a href="#simulator" class="hover:text-pink-400">Simulator</a>
+        <a href="#finances" class="hover:text-pink-400">Financials</a>
+        <a href="#calculator" class="hover:text-pink-400">Calculator</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive JavaScript Logic -->
+  <script>
+    // Simulator State
+    const simModes = {
+      color: {
+        title: "Warm Autumn Palette",
+        badge: "98% Match",
+        content: `
+          <p class="text-xs font-bold text-slate-200 mb-3">Recommended Colors for skin tone:</p>
+          <div class="flex gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-[#8B4513] border-2 border-white/50 flex items-center justify-center text-[9px] text-white font-extrabold shadow">Terracotta</div>
+            <div class="w-10 h-10 rounded-full bg-[#556B2F] border-2 border-white/50 flex items-center justify-center text-[9px] text-white font-extrabold shadow">Olive</div>
+            <div class="w-10 h-10 rounded-full bg-[#DAA520] border-2 border-white/50 flex items-center justify-center text-[9px] text-black font-extrabold shadow">Mustard</div>
+            <div class="w-10 h-10 rounded-full bg-[#800020] border-2 border-white/50 flex items-center justify-center text-[9px] text-white font-extrabold shadow">Burgundy</div>
+          </div>
+          <p class="text-xs text-slate-300 italic">"Warm earth tones highlight your natural facial contrast with optimum radiance."</p>
+        `
+      },
+      makeup: {
+        title: "Soft Glam Contour Guide",
+        badge: "AR Guide Active",
+        content: `
+          <p class="text-xs font-bold text-slate-200 mb-2">Step-by-Step AR Suggestions:</p>
+          <ul class="text-xs text-slate-200 space-y-1.5 mb-3 font-semibold">
+            <li>✨ <span class="text-pink-300 font-bold">Blush:</span> Peach undertone applied high on cheekbones</li>
+            <li>💄 <span class="text-pink-300 font-bold">Lip:</span> Nude Berry satin lipstick</li>
+            <li>👁️ <span class="text-pink-300 font-bold">Eyeliner:</span> Subtle winged brown liner</li>
+          </ul>
+          <p class="text-xs text-slate-300 italic">"Lighting calibrated for natural daylight simulation."</p>
+        `
+      },
+      hair: {
+        title: "Virtual Hairstyle Try-On",
+        badge: "3 Styles Saved",
+        content: `
+          <p class="text-xs font-bold text-slate-200 mb-2">Top Recommended Styles:</p>
+          <div class="grid grid-cols-2 gap-2 mb-3">
+            <div class="p-2.5 rounded-xl bg-white/10 text-xs text-white font-bold border border-white/20">Layered Bob (Honey Blonde)</div>
+            <div class="p-2.5 rounded-xl bg-white/10 text-xs text-white font-bold border border-white/20">Textured Waves (Espresso)</div>
+          </div>
+          <p class="text-xs text-slate-300 italic">"Matches oval face structure with 94% compatibility."</p>
+        `
+      },
+      outfit: {
+        title: "Full-Body Outfit Matcher",
+        badge: "MIRAI FULL",
+        content: `
+          <p class="text-xs font-bold text-slate-200 mb-2">Occasion: Business Casual</p>
+          <div class="bg-white/10 p-3.5 rounded-xl border border-white/20 mb-3 text-xs">
+            <div class="text-pink-300 font-bold mb-1">Recommended Combo:</div>
+            <div class="text-white font-semibold">Beige Linen Blazer + High-Waist Olive Trousers + Cream Loafers</div>
+          </div>
+          <p class="text-xs text-slate-300 italic">"Uses items from your synced Digital Wardrobe."</p>
+        `
+      }
+    };
+
+    function setMirrorMode(mode) {
+      document.querySelectorAll('.sim-btn').forEach(btn => {
+        btn.classList.remove('dark-card-active');
+      });
+      document.getElementById(`btn-${mode}`).classList.add('dark-card-active');
+
+      const data = simModes[mode];
+      document.getElementById('sim-title').innerText = data.title;
+      document.getElementById('sim-content').innerHTML = data.content;
+    }
+
+    // Cost Breakdown Logic
+    const miniBOM = [
+      { name: "Small Display Screen", cost: 150 },
+      { name: "Mini Computer / AI Board", cost: 100 },
+      { name: "Reflective Mirror Panel", cost: 70 },
+      { name: "Touch Sensor / Frame", cost: 60 },
+      { name: "Frame and Casing", cost: 60 },
+      { name: "Assembly & Testing", cost: 40 },
+      { name: "Wires & Power Supply", cost: 30 },
+      { name: "LED Lighting", cost: 20 },
+      { name: "Packaging", cost: 20 },
+    ];
+
+    const fullBOM = [
+      { name: "Full-Size Mirror & Frame", cost: 300 },
+      { name: "Display & Touch Panel", cost: 250 },
+      { name: "Mini Computer / AI Board", cost: 180 },
+      { name: "Packaging & Transport Box", cost: 120 },
+      { name: "Assembly & Testing", cost: 100 },
+      { name: "Lighting & Sensors", cost: 80 },
+      { name: "Wiring & Power Supply", cost: 70 },
+    ];
+
+    function toggleCostModel(model) {
+      const isMini = model === 'mini';
+
+      document.getElementById('tab-mini').className = isMini 
+        ? "px-6 py-2.5 rounded-full text-xs font-bold bg-pink-500 text-white transition-all shadow cursor-pointer"
+        : "px-6 py-2.5 rounded-full text-xs font-bold text-slate-300 hover:text-white transition-all cursor-pointer";
+
+      document.getElementById('tab-full').className = !isMini 
+        ? "px-6 py-2.5 rounded-full text-xs font-bold bg-pink-500 text-white transition-all shadow cursor-pointer"
+        : "px-6 py-2.5 rounded-full text-xs font-bold text-slate-300 hover:text-white transition-all cursor-pointer";
+
+      document.getElementById('cost-table-title').innerText = isMini 
+        ? "MIRAI MINI Bill of Materials (BOM)"
+        : "MIRAI FULL Bill of Materials (BOM)";
+
+      const list = isMini ? miniBOM : fullBOM;
+      const listContainer = document.getElementById('cost-list');
+      listContainer.innerHTML = '';
+
+      let total = 0;
+      list.forEach(item => {
+        total += item.cost;
+        const row = document.createElement('div');
+        row.className = 'flex justify-between items-center py-2 border-b border-white/15';
+        row.innerHTML = `<span class="text-slate-200 font-bold">${item.name}</span><span class="font-mono text-pink-300 font-extrabold">AED ${item.cost}</span>`;
+        listContainer.appendChild(row);
+      });
+
+      document.getElementById('cost-total').innerText = `AED ${total}`;
+
+      if (isMini) {
+        document.getElementById('metric-price').innerText = "AED 999";
+        document.getElementById('metric-cost').innerText = "AED 550";
+        document.getElementById('metric-profit').innerText = "AED 449";
+        document.getElementById('profit-bar').style.width = "45%";
+      } else {
+        document.getElementById('metric-price').innerText = "AED 1,799";
+        document.getElementById('metric-cost').innerText = "AED 1,100";
+        document.getElementById('metric-profit').innerText = "AED 699";
+        document.getElementById('profit-bar').style.width = "39%";
+      }
+    }
+
+    // Interactive Revenue Calculator
+    function updateCalculator() {
+      const miniUnits = parseInt(document.getElementById('range-mini').value);
+      const fullUnits = parseInt(document.getElementById('range-full').value);
+
+      document.getElementById('calc-mini-val').innerText = miniUnits;
+      document.getElementById('calc-full-val').innerText = fullUnits;
+
+      const miniPrice = 999;
+      const miniProfitPerUnit = 449;
+
+      const fullPrice = 1799;
+      const fullProfitPerUnit = 699;
+
+      const totalRev = (miniUnits * miniPrice) + (fullUnits * fullPrice);
+      const totalProfit = (miniUnits * miniProfitPerUnit) + (fullUnits * fullProfitPerUnit);
+
+      document.getElementById('calc-rev').innerText = `AED ${totalRev.toLocaleString()}`;
+      document.getElementById('calc-profit').innerText = `AED ${totalProfit.toLocaleString()}`;
+    }
+
+    // Persona Switcher
+    const personaData = {
+      students: {
+        title: "Students & Families",
+        desc: "Provides affordable personal styling, hair guidance, and makeup try-ons right at home, saving teenagers and families time and money before purchasing products that may not suit them.",
+        icon: "fa-graduation-cap"
+      },
+      salons: {
+        title: "Salons & Beauty Stores",
+        desc: "Serves as an interactive kiosk in salons, allowing clients to preview haircuts, hair dye colors, and makeup treatments before services begin, helping businesses upsell with confidence.",
+        icon: "fa-spa"
+      },
+      professionals: {
+        title: "Working Adults",
+        desc: "Delivers fast, automated morning outfit and grooming suggestions, streamlining daily routines for busy professionals.",
+        icon: "fa-briefcase"
+      },
+      retailers: {
+        title: "Fashion Retailers",
+        desc: "Integrated into clothing boutiques as interactive changing room displays to increase sales conversion and decrease garment returns.",
+        icon: "fa-store"
+      }
+    };
+
+    function setPersona(key) {
+      document.querySelectorAll('.persona-tab').forEach(btn => btn.classList.remove('dark-card-active'));
+      document.getElementById(`persona-btn-${key}`).classList.add('dark-card-active');
+
+      const data = personaData[key];
+      document.getElementById('persona-title').innerText = data.title;
+      document.getElementById('persona-desc').innerText = data.desc;
+      document.getElementById('persona-icon').className = `fa-solid ${data.icon}`;
+    }
+
+    // FAQ Accordion
+    function toggleFaq(id) {
+      const content = document.getElementById(`faq-content-${id}`);
+      const icon = document.getElementById(`faq-icon-${id}`);
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    // Initialize Defaults
+    toggleCostModel('mini');
+    updateCalculator();
+  </script>
+</body>
+</html>
